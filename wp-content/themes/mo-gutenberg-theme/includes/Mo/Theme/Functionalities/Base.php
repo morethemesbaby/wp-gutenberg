@@ -62,10 +62,14 @@ if ( ! class_exists( 'Mo_Theme_Functionalities' ) ) {
 		 *
 		 * @since 1.0.0
 		 *
+		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+		 *
 		 * @return void
 		 */
 		public function setup_gutenberg() {
-			echo 'Gutenberg';
+			$wide_alignment     = new Mo_Theme_Functionalities_WideAlignment();
+			$default_block_styles     = new Mo_Theme_Functionalities_DefaultBlockStyles();
+			$responsive_embeds     = new Mo_Theme_Functionalities_ResponsiveEmbeds();
 		}
 
 		/**
