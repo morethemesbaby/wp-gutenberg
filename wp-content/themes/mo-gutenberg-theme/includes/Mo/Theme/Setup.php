@@ -26,7 +26,7 @@ if ( ! class_exists( 'Mo_Theme_Setup' ) ) {
 		 */
 		public $arguments = array(
 			'include_folder'    => 'includes/',
-			'functionality_set' => '',
+			'functionality_set' => array(),
 			'assets'            => array(),
 		);
 

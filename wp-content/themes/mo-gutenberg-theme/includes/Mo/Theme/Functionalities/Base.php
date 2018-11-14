@@ -30,7 +30,7 @@ if ( ! class_exists( 'Mo_Theme_Functionalities' ) ) {
 		 * @var array $arguments An array of arguments
 		 */
 		public $arguments = array(
-			'set' => '',
+			'set' => array(),
 		);
 
 		/**
@@ -44,11 +44,28 @@ if ( ! class_exists( 'Mo_Theme_Functionalities' ) ) {
 		public function __construct( $arguments ) {
 			$this->arguments = $this->array_merge( $this->arguments, $arguments );
 
-			switch ( $this->arguments['set'] ) {
-				case FUNCTIONALITY_SET_WPORG:
-					$this->setup_wporg();
-					break;
+			if ( empty( $this->arguments['set'] ) ) {
+				return;
 			}
+
+			if ( in_array( FUNCTIONALITY_SET_WPORG, $this->arguments['set'] ) ) {
+				$this->setup_wporg();
+			}
+
+			if ( in_array( FUNCTIONALITY_SET_GUTENBERG, $this->arguments['set'] ) ) {
+				$this->setup_gutenberg();
+			}
+		}
+
+		/**
+		 * Sets up Gutenberg specific functionalities.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return void
+		 */
+		public function setup_gutenberg() {
+			echo 'Gutenberg';
 		}
 
 		/**

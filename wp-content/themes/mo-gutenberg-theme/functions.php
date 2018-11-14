@@ -11,15 +11,28 @@
 /**
  * Defines the WordPress.org functionality set.
  *
- * These functionalities will be implemented by the theme.
+ * This set of functionalities will be implemented by the theme.
  *
  * @since 1.0.0
  *
  * @link https://developer.wordpress.org/themes/functionality/
  *
- * @var string Identifies the WordPress.org functionality set.
+ * @var string
  */
 define( 'FUNCTIONALITY_SET_WPORG', 'wporg' );
+
+/**
+ * Defines the Gutenberg functionality set.
+ *
+ * This set of functionalities will be implemented by the theme.
+ *
+ * @since 1.0.0
+ *
+ * @link https://developer.wordpress.org/themes/functionality/
+ *
+ * @var string
+ */
+define( 'FUNCTIONALITY_SET_GUTENBERG', 'Gutenberg' );
 
 /**
  * Use Composer's autoload.
@@ -46,7 +59,10 @@ $mo_theme = new Mo_Theme_Setup(
 	apply_filters( 'mo_theme_setup_array',
 		array(
 			'include_folder'    => 'includes/',
-			'functionality_set' => FUNCTIONALITY_SET_WPORG,
+			'functionality_set' => array(
+				FUNCTIONALITY_SET_WPORG,
+				FUNCTIONALITY_SET_GUTENBERG,
+			),
 			'assets'            => array(
 				'src_url'           => get_template_directory_uri(),
 				'folder'            => '',
