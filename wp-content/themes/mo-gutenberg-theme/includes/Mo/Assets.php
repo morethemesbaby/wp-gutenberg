@@ -154,37 +154,12 @@ if ( ! class_exists( 'Mo_Assets' ) ) {
 				)
 			);
 
-			/**
-			 * This code is not supported by WP.org / < PHP 5.3
-			 *
-			 * ```
-			 * add_action(
-			 *		$this->action,
-			 *		function() use ( $script ) {
-			 *			$this->enqueue_script( $script );
-			 *		}
-			 *	);
-			 * ```
-			 */
-
-			/**
-			 * This code works, but throws the following warning in the log file:
-			 *
-			 * ```
-			 * PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, no array or string given in /home/cs/work/wp-best-practices/wp-includes/class-wp-hook.php on line 286
-			 * ```
-			 */
-			add_action( $this->action, $this->enqueue_script( $script ) );
-
-			/**
-			 * This workaround might work:
-			 *
-			 * @todo Fix `call_user_func_array()` warning in the log file.
-			 *
-			 * 1. make `$script` global variable
-			 * 2. make `enqueue_script` use this global variable instead of the current arguments.
-			 * 3. add_action( $this->action, array( $this, 'enqueue_script' );
-			 */
+			add_action(
+				$this->action,
+				function() use ( $script ) {
+					$this->enqueue_script( $script );
+				}
+			);
 		}
 
 		/**
@@ -205,7 +180,12 @@ if ( ! class_exists( 'Mo_Assets' ) ) {
 				)
 			);
 
-			add_action( $this->action, $this->enqueue_style( $style ) );
+			add_action(
+				$this->action,
+				function() use ( $style ) {
+					$this->enqueue_style( $style );
+				}
+			);
 		}
 
 		/**
