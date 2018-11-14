@@ -20,8 +20,6 @@ $attributes = apply_filters(
 	'mo_theme_post_single_attributes',
 	array(
 		'block'        => 'post',
-		'element'      => 'single',
-		'custom_class' => $mopost->get_class(),
 		'custom_id'    => 'post-' . get_the_ID(),
 	)
 );
