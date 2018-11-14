@@ -40,7 +40,8 @@ wp-content/*
 
 wp-content/plugins/hide-admin-bar/
 wp-content/plugins/wordpress-importer/
-wp-content/themes/twentyseventeen
+wp-content/themes/twentyseventeen/
+wp-content/themes/atomic-blocks/
 
 
 # WordPress defaults
