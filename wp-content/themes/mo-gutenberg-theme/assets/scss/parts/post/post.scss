@@ -1,0 +1,11 @@
+@mixin post {
+	@include width;
+	
+	.post-title {
+		@include post-title;
+	}
+
+	.post-content {
+		@include post-content;
+	}
+}
