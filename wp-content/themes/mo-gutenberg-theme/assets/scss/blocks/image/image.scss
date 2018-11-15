@@ -1,0 +1,13 @@
+// Image
+//
+// See https://github.com/WordPress/gutenberg/tree/master/packages/block-library/src/image
+//
+// The HTML code generated is:
+//
+// ```
+// <figure class="wp-block-image"><img src="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002.jpg" alt="" class="wp-image-27" srcset="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002.jpg 1200w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-300x100.jpg 300w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-768x256.jpg 768w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-1024x341.jpg 1024w" sizes="(max-width: 1200px) 100vw, 1200px"><figcaption>1200×400</figcaption></figure>
+// ```
+//
+@mixin image {
+	//
+}

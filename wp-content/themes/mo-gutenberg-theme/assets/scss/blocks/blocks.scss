@@ -3,4 +3,8 @@
 	@include paragraph;
 	@include cover;
 	@include list;
+	@include heading;
+	@include quote;
+	@include video;
+	@include image;
 }
