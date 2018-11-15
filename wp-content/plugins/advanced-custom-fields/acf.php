@@ -252,6 +252,9 @@ class ACF {
 		}
 		
 		// include gutenberg
+// by cs
+// - https://github.com/elliotcondon/acf/issues/719
+define('GUTENBERG_VERISON', '5');
 		if( defined('GUTENBERG_VERSION') ) {
 			acf_include('includes/forms/form-gutenberg.php');
 		}
