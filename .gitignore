@@ -40,6 +40,7 @@ wp-content/*
 
 wp-content/plugins/hide-admin-bar/
 wp-content/plugins/wordpress-importer/
+wp-content/plugins/advanced-custom-fields/
 wp-content/themes/twentyseventeen/
 wp-content/themes/atomic-blocks/
 
