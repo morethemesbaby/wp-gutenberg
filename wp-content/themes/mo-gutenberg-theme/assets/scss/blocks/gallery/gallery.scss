@@ -1,0 +1,13 @@
+// Gallery
+//
+// See https://github.com/WordPress/gutenberg/tree/master/packages/block-library/src/gallery
+//
+// The HTML code generated is:
+//
+// ```
+// <ul class="wp-block-gallery columns-3 is-cropped"><li class="blocks-gallery-item"><figure><img src="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002.jpg" alt="" data-id="27" data-link="http://localhost/wp-gutenberg/2018/11/14/cover/image-alignment-1200x4002/" class="wp-image-27" srcset="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002.jpg 1200w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-300x100.jpg 300w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-768x256.jpg 768w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/image-alignment-1200x4002-1024x341.jpg 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></figure></li><li class="blocks-gallery-item"><figure><img src="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/Screen-Shot-2018-11-11-at-09.59.30.png" alt="" data-id="13" data-link="http://localhost/wp-gutenberg/screen-shot-2018-11-11-at-09-59-30/" class="wp-image-13" srcset="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/Screen-Shot-2018-11-11-at-09.59.30.png 2048w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/Screen-Shot-2018-11-11-at-09.59.30-300x225.png 300w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/Screen-Shot-2018-11-11-at-09.59.30-768x576.png 768w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/Screen-Shot-2018-11-11-at-09.59.30-1024x768.png 1024w" sizes="(max-width: 2048px) 100vw, 2048px"></figure></li><li class="blocks-gallery-item"><figure><img src="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/alistapart-1024-black.png" alt="" data-id="9" data-link="http://localhost/wp-gutenberg/alistapart-1024-black/" class="wp-image-9" srcset="http://localhost/wp-gutenberg/wp-content/uploads/2018/11/alistapart-1024-black.png 1024w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/alistapart-1024-black-150x150.png 150w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/alistapart-1024-black-300x300.png 300w, http://localhost/wp-gutenberg/wp-content/uploads/2018/11/alistapart-1024-black-768x768.png 768w" sizes="(max-width: 1024px) 100vw, 1024px"></figure></li></ul>
+// ```
+//
+@mixin gallery {
+	//
+}

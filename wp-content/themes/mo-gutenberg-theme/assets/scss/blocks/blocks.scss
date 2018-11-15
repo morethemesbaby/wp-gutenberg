@@ -1,5 +1,8 @@
 @mixin blocks {
+	// Inline elements
 	@include inline-image;
+
+	// Common blocks
 	@include paragraph;
 	@include cover;
 	@include list;
@@ -7,4 +10,12 @@
 	@include quote;
 	@include video;
 	@include image;
+	@include gallery
+	@include audio;
+	@include file;
+
+	// Formatting
+	@include code;
+	@include table;
+	@include classic;
 }
