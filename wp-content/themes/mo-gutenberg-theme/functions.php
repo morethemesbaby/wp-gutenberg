@@ -11,7 +11,7 @@
 /**
  * Defines the WordPress.org functionality set.
  *
- * This set of functionalities will be implemented by the theme.
+ * WordpRess.org functionalities will be implemented by the theme.
  *
  * @since 1.0.0
  *
@@ -24,15 +24,28 @@ define( 'FUNCTIONALITY_SET_WPORG', 'wporg' );
 /**
  * Defines the Gutenberg functionality set.
  *
- * This set of functionalities will be implemented by the theme.
+ * Gutenberg functionalities will be implemented by the theme.
  *
  * @since 1.0.0
  *
- * @link https://developer.wordpress.org/themes/functionality/
+ * @link https://github.com/WordPress/gutenberg
  *
  * @var string
  */
 define( 'FUNCTIONALITY_SET_GUTENBERG', 'Gutenberg' );
+
+/**
+ * Defines the ACF Blocks functionality set.
+ *
+ * ACF Blocks functionality will be implemented by the theme.
+ *
+ * @since 1.0.0
+ *
+ * @link https://www.advancedcustomfields.com/blog/the-state-of-acf-in-a-gutenberg-world/
+ *
+ * @var string
+ */
+define( 'FUNCTIONALITY_SET_ACFBLOCKS', 'ACFBlocks' );
 
 /**
  * Use Composer's autoload.
@@ -62,6 +75,7 @@ $mo_theme = new Mo_Theme_Setup(
 			'functionality_set' => array(
 				FUNCTIONALITY_SET_WPORG,
 				FUNCTIONALITY_SET_GUTENBERG,
+				FUNCTIONALITY_SET_ACFBLOCKS,
 			),
 			'assets'            => array(
 				'src_url'           => get_template_directory_uri(),

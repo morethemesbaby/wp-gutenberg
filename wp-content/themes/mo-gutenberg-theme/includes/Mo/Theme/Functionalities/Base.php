@@ -41,20 +41,34 @@ if ( ! class_exists( 'Mo_Theme_Functionalities' ) ) {
 		 * @param array $arguments An array of arguments.
 		 * @return void
 		 */
-		public function __construct( $arguments ) {
+		public function __construct( $arguments = array() ) {
 			$this->arguments = $this->array_merge( $this->arguments, $arguments );
 
 			if ( empty( $this->arguments['set'] ) ) {
 				return;
 			}
 
-			if ( in_array( FUNCTIONALITY_SET_WPORG, $this->arguments['set'] ) ) {
+			if ( in_array( FUNCTIONALITY_SET_WPORG, $this->arguments['set'], true ) ) {
 				$this->setup_wporg();
 			}
 
-			if ( in_array( FUNCTIONALITY_SET_GUTENBERG, $this->arguments['set'] ) ) {
+			if ( in_array( FUNCTIONALITY_SET_GUTENBERG, $this->arguments['set'], true ) ) {
 				$this->setup_gutenberg();
 			}
+
+			if ( in_array( FUNCTIONALITY_SET_ACFBLOCKS, $this->arguments['set'], true ) ) {
+				$this->setup_acf_blocks();
+			}
+		}
+
+		/**
+		 * Sets up ACF Block specific functionalities.
+		 *
+		 * @since 1.0.0
+		 * @return void
+		 */
+		public function setup_acf_blocks() {
+			$acf_blocks = new Mo_Theme_Functionalities_ACFBlocks();
 		}
 
 		/**
@@ -67,9 +81,9 @@ if ( ! class_exists( 'Mo_Theme_Functionalities' ) ) {
 		 * @return void
 		 */
 		public function setup_gutenberg() {
-			$wide_alignment     = new Mo_Theme_Functionalities_WideAlignment();
-			$default_block_styles     = new Mo_Theme_Functionalities_DefaultBlockStyles();
-			$responsive_embeds     = new Mo_Theme_Functionalities_ResponsiveEmbeds();
+			$wide_alignment       = new Mo_Theme_Functionalities_WideAlignment();
+			$default_block_styles = new Mo_Theme_Functionalities_DefaultBlockStyles();
+			$responsive_embeds    = new Mo_Theme_Functionalities_ResponsiveEmbeds();
 		}
 
 		/**
